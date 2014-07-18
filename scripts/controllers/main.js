@@ -48,7 +48,6 @@ angular.module('englishTestApp')
         $scope.navigation.nextTaskAvailable = (testContent.getTask(exerciseNr - 1, taskNr) !== false);
         $scope.navigation.previousTaskAvailable = (testContent.getTask(exerciseNr - 1, taskNr - 2) !== false);
 
-
         $scope.navigation.goToNextTask = function (nextTaskAvailable) {
             if (nextTaskAvailable !== false) {
                 $location.path('/exercise/' + exerciseNr + '/taskNr/' + (parseInt(taskNr) + 1));
@@ -64,8 +63,6 @@ angular.module('englishTestApp')
                 return false;
             }
         }
-
-
     }
 ]
 );

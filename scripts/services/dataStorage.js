@@ -3,7 +3,6 @@
 angular.module('dataStorage', [])
     .service('testContent', function () {
 
-
         var testContent = {
             getTask: function (exerciseNr, taskNr) {
                 if (this.content[exerciseNr] && this.content[exerciseNr][taskNr]) {
