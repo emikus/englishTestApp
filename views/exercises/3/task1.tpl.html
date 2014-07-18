@@ -1,0 +1,22 @@
+<section id="exercise3task1" class="center-block">
+    <div ng-repeat="question in taskContent.questions" class="col-lg-4" >
+        <img src="images/exercises/3/task1/{{question.media.image}}" alt="" class="questionImg">
+        <div class="form-group">
+            <section ng-class="{example: $index === taskContent.exampleIndex}">
+                <p ng-show="$index === taskContent.exampleIndex" class="example">Example:</span></p>
+                <label for="inputPassword" class="col-sm-2 control-label">{{$index + 1}}</label>
+                <div class="col-lg-6">
+                    <input type="text" ng-model="userAnswers[$index]"  class="form-control input-sm">
+                </div>
+                <span ng-show="userResults[$index] == 1" class="resultSign"><img src="images/icons/correct.png" alt=""></span>
+                <span ng-show="userResults[$index] == 0" class="resultSign"><img src="images/icons/wrong.png" alt=""></span>
+            </section>
+        </div>
+    </div>
+
+    <div class="prompts text-center clearfix col-lg-12">
+       <span ng-repeat="prompt in taskContent.prompts" > {{prompt}} </span>
+    </div>
+
+</section>
+

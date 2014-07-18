@@ -1,0 +1,22 @@
+<section id="exercise3task2" class="center-block">
+    <figure ng-repeat="question in taskContent.questions" >
+        <img src="images/exercises/{{exerciseNr}}/task{{taskNr}}/{{question.media.image}}" alt=""  >
+        <figcaption>{{$index + 1}}</figcaption>
+    </figure>
+   <section>
+        <div ng-repeat="question in taskContent.questions" class="col-lg-4 form-group">
+            <div class="col-lg-1">
+               <span ng-show="userResults[$index] == 1" class="resultSign"><img src="images/icons/correct.png" alt=""></span>
+                <span ng-show="userResults[$index] == 0" class="resultSign"><img src="images/icons/wrong.png" alt=""></span>
+            </div>
+
+            <div class="col-lg-2">
+                <input type="text" ng-model="userAnswers[$index]" class="form-control input-sm">
+            </div>
+            <div class="col-lg-8">
+                {{question.text}}
+            </div>
+        </div>
+    </section>
+</section>
+
